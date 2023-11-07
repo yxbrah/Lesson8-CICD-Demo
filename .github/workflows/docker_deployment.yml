@@ -1,4 +1,4 @@
-ame: Build and Deploy to AWS
+Name: Build and Deploy to AWS
 
 on:
   push:
@@ -30,6 +30,9 @@ jobs:
         run: |
           docker push $IMAGE_NAME:$IMAGE_TAG
           docker push $IMAGE_NAME:latest
+
+  #upon creating image
+  #go to AWS and make it online LOL
 
   deploy-docker-image:
     runs-on: ubuntu-latest
